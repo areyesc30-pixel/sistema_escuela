@@ -50,8 +50,18 @@ class Inicio extends BaseController
     {
         session()->destroy();
         return redirect()->('/');
-        
+
     }
 
+    
+}
+
+public function panel ()
+{
+    if (!session()->get('usuario')){
+        return redirect()->to('/');
+
+    }
+    return view('panel');
     
 }

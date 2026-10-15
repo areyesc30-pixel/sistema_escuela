@@ -2,7 +2,13 @@
 
 use CodeIgniter\Router\RouteCollection;
 
-/** @var RouteCollection $routes */
-$routes->get('/', 'Inicio::index');
+/**  
+ * @var RouterCollection $routes
+ 
+*/
+$router->get('/', 'inicio::index');
+$routes->post('verificar', 'Inicio::verificar');
+$routes->get('panel', 'Inicio::panel');
+$routes->get('cerrar', 'Inicio::cerrar');
 
 
