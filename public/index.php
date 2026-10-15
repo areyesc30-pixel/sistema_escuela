@@ -13,6 +13,3 @@ $paths = [
 ];
 
 require_once $paths['systemPath'] . 'Boot.php';
-
-$app = require $paths['appPath'] . 'Config/App.php';
-$app->run();
