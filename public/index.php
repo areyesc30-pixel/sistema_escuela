@@ -5,4 +5,10 @@ ini_set('display_errors', 1);
 
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
-require_once FCPATH . '../system/bootstrap.php';
+$paths = [
+    'systemPath' => FCPATH . '../system/',
+    'appPath'    => FCPATH . '../app/',
+    'writablePath' => FCPATH . '../writable/',
+];
+
+require_once $paths['systemPath'] . 'Boot.php';
