@@ -19,7 +19,7 @@
         <div class="error"><?= $error ?></div>
     <?php endif ?>
 
-    <form method="post" action="<?= base_url('verificar') ?>">
+    <form method="post" action="http://localhost/sistema_tareas/public/verificar">
         <div class="campo">
             <label>Correo electrónico:</label>
             <input type="email" name="correo" required>

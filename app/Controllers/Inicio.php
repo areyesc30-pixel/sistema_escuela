@@ -2,40 +2,27 @@
 
 namespace App\Controllers;
 
-use App\Models\UsuarioModel;
-
 class Inicio extends BaseController
 {
     public function index()
     {
-        $sesion = session()->get('usuario_id');
-        if ($sesion) {
-            return redirect()->to('panel');
-        }
+        helper(['url']);
         return view('login');
     }
 
     public function verificar()
     {
+        helper(['url']);
+        
         $correo = $this->request->getPost('correo');
         $clave = $this->request->getPost('clave');
 
-        $modelo = new UsuarioModel();
-        $usuario = $modelo->buscarPorCorreo($correo);
-
-        if (!$usuario) {
-            return view('login', ['error' => 'El correo no está registrado']);
+        // Prueba simple primero
+        if ($correo === 'areyesc30@miumg.edu.gt' && $clave === 'Admin123') {
+            session()->set('nombre', 'Alex Fernando Reyes');
+            return view('panel');
         }
 
-        if ($clave !== $usuario['clave']) {
-            return view('login', ['error' => 'Contraseña incorrecta']);
-        }
-
-        session()->set([
-            'usuario_id' => $usuario['id'],
-            'nombre' => $usuario['nombre']
-        ]);
-
-        return redirect()->to('panel');
+        return view('login', ['error' => 'Correo o contraseña incorrectos']);
     }
 }
