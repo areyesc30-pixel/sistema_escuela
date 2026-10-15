@@ -11,3 +11,6 @@ $routes->setDefaultController('Inicio');
 $routes->setDefaultMethod('index');
 
 $routes->get('/', 'Inicio::index');
+$routes->post('ingresar', 'Inicio::ingresar');
+$routes->get('tareas', 'Inicio::tareas');
+$routes->get('salir', 'Inicio::salir');
