@@ -5,11 +5,12 @@ ini_set('display_errors', 1);
 
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
-$paths = [
-    'systemPath'   => FCPATH . '../system/',
-    'appPath'      => FCPATH . '../app/',
-    'writablePath' => FCPATH . '../writable/',
-    'rootPath'     => FCPATH . '../',
-];
+// Cargar la configuración de rutas
+require_once FCPATH . '../app/Config/Paths.php';
 
-require_once $paths['systemPath'] . 'Boot.php';
+$paths = new Config\Paths();
+
+// Cargar y ejecutar el arranque
+require_once $paths->systemDirectory . '/Boot.php';
+
+CodeIgniter\Boot::bootWeb($paths);
