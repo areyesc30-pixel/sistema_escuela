@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -12,13 +13,3 @@ $paths = [
 ];
 
 require_once $paths['systemPath'] . 'Boot.php';
-
-$routes = \Config\Services::routes();
-$routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Inicio');
-$routes->setDefaultMethod('index');
-$routes->get('/', 'Inicio::index');
-
-$app = \Config\Services::codeigniter();
-$app->setRoutes($routes);
-$app->run();
