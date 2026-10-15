@@ -10,3 +10,6 @@ $appPath = FCPATH . '../app/';
 $writablePath = FCPATH . '../writable/';
 
 require_once $systemPath . 'Boot.php';
+
+$app = \Config\Services::codeigniter();
+$app->run();
