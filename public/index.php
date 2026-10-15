@@ -1,5 +1,4 @@
 <?php
-echo "Paso 1\n";
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -13,8 +12,7 @@ $paths = [
     'rootPath'     => FCPATH . '../',
 ];
 
-echo "Paso 2\n";
-
 require_once $paths['systemPath'] . 'Boot.php';
 
-echo "Paso 3\n";
+$app = \Config\Services::codeigniter();
+$app->run();
