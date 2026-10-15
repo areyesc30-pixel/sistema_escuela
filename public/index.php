@@ -14,5 +14,5 @@ $paths = [
 
 require_once $paths['systemPath'] . 'Boot.php';
 
-$app = \Config\Services::codeigniter();
+$app = require $paths['appPath'] . 'Config/App.php';
 $app->run();
