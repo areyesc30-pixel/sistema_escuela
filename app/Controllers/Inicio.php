@@ -317,6 +317,31 @@ class Inicio extends BaseController
         return redirect()->to(base_url('perfil'));
     }
 
+       public function subir_foto()
+    {
+        if (!session()->get('ingresado')) {
+            return redirect()->to(base_url('ingresar'));
+        }
+        $lang = session()->get('idioma') ?? 'es';
+        $archivo = $this->request->getFile('foto');
+        
+        if ($archivo && $archivo->isValid() && !$archivo->hasMoved()) {
+            $nombreNuevo = $archivo->getRandomName();
+            $archivo->move(FCPATH . 'uploads', $nombreNuevo);
+            
+            $model = new \App\Models\UsuarioModel();
+            $usuario = $model->find(session()->get('id'));
+            
+            if (!empty($usuario['foto']) && file_exists(FCPATH . 'uploads/' . $usuario['foto'])) {
+                unlink(FCPATH . 'uploads/' . $usuario['foto']);
+            }
+            
+            $model->update(session()->get('id'), ['foto' => $nombreNuevo]);
+            session()->setFlashdata('exito', $lang === 'en' ? 'Photo uploaded successfully' : 'Foto subida con éxito');
+        }
+        return redirect()->to(base_url('perfil'));
+    }
+
     public function eliminar_foto()
     {
         if (!session()->get('ingresado')) {
@@ -334,6 +359,7 @@ class Inicio extends BaseController
         session()->setFlashdata('exito', $lang === 'en' ? 'Photo deleted' : 'Foto eliminada');
         return redirect()->to(base_url('perfil'));
     }
+}
 
 
 
