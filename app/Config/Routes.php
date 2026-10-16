@@ -21,3 +21,6 @@ $routes->get('eliminar/(:num)', 'Inicio::eliminar/$1');
 
 $routes->get('recuperar-clave', 'Inicio::recuperar_clave');
 $routes->post('enviar-recuperacion', 'Inicio::enviar_recuperacion');
+
+$routes->get('registro', 'Inicio::registro');
+$routes->post('guardar-registro', 'Inicio::guardar_registro');
