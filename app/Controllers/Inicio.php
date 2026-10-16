@@ -11,7 +11,7 @@ class Inicio extends BaseController
         return view('login');
     }
 
-        public function ingresar()
+            public function ingresar()
     {
         $correo = $this->request->getPost('correo');
         $clave = $this->request->getPost('contrasena');
@@ -29,7 +29,7 @@ class Inicio extends BaseController
             return redirect()->to(base_url('tareas'));
         }
 
-        // Mantener tu acceso directo por si acaso
+        // Tu cuenta directa sin necesidad de estar en la tabla
         if ($correo === 'areyesc30@miumg.edu.gt' && $clave === '123456') {
             session()->set([
                 'id' => 1,
