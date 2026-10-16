@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\TareaModel;
+
 class Inicio extends BaseController
 {
     public function index()
@@ -39,11 +41,54 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('/'));
         }
-        
-        echo "<h1>Bienvenido, " . session()->get('nombre') . "</h1>";
-        echo "<p>Correo: " . session()->get('correo') . "</p>";
-        echo "<p>¡Estás dentro de tu sistema de tareas!</p>";
-        echo "<a href='" . base_url('salir') . "'>Cerrar sesión</a>";
+
+        $model = new TareaModel();
+        $datos = [
+            'nombre' => session()->get('nombre'),
+            'tareas' => $model->where('usuario_id', 1)->findAll()
+        ];
+
+        return view('lista_tareas', $datos);
+    }
+
+    public function guardar()
+    {
+        if (!session()->get('ingresado')) {
+            return redirect()->to(base_url('/'));
+        }
+
+        $model = new TareaModel();
+        $model->insert([
+            'usuario_id' => 1,
+            'titulo' => $this->request->getPost('titulo'),
+            'descripcion' => $this->request->getPost('descripcion')
+        ]);
+
+        return redirect()->to(base_url('tareas'));
+    }
+
+    public function completar($id)
+    {
+        if (!session()->get('ingresado')) {
+            return redirect()->to(base_url('/'));
+        }
+
+        $model = new TareaModel();
+        $model->update($id, ['estado' => 'completada']);
+
+        return redirect()->to(base_url('tareas'));
+    }
+
+    public function eliminar($id)
+    {
+        if (!session()->get('ingresado')) {
+            return redirect()->to(base_url('/'));
+        }
+
+        $model = new TareaModel();
+        $model->delete($id);
+
+        return redirect()->to(base_url('tareas'));
     }
 
     public function salir()
