@@ -91,7 +91,9 @@
         <a href="<?= base_url('recuperar-clave') ?>" style="color: #4a90e2;">¿Olvidaste tu contraseña?</a>
     </p>
 
-
+        <p style="text-align: center; margin-top: 10px;">
+            ¿No tienes cuenta? <a href="<?= base_url('registro') ?>" style="color: #4a90e2;">Regístrate aquí</a>
+        </p>
 
     </div>
 
