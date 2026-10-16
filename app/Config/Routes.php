@@ -24,3 +24,6 @@ $routes->post('enviar-recuperacion', 'Inicio::enviar_recuperacion');
 
 $routes->get('registro', 'Inicio::registro');
 $routes->post('guardar-registro', 'Inicio::guardar_registro');
+
+$routes->get('editar-tarea/(:num)', 'Inicio::editar_tarea/$1');
+$routes->post('actualizar-tarea/(:num)', 'Inicio::actualizar_tarea/$1');
