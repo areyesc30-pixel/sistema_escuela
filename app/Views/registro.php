@@ -1,139 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registro de Usuario</title>
+    <title><?= ($lang ?? 'es') === 'en' ? 'Create Account' : 'Crear Cuenta' ?></title>
     <style>
-                body {
-            background-color: #faf5f0;
-            font-family: 'Segoe UI', Arial;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #c05621;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .contenedor {
-            background: white;
-            padding: 30px;
-            margin: 0 auto;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-            margin-top: 18px;
-            color: #9c4221;
-            font-weight: 500;
-        }
-
-        input {
-            width: 100%;
-            padding: 11px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-size: 15px;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #ed8936;
-        }
-
-        button {
-            background-color: #ed8936;
-            color: white;
-            border: none;
-            padding: 12px;
-            margin-top: 25px;
-            width: 100%;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        button:hover {
-            background-color: #dd6b20;
-        }
-
-        .mensaje {
-            padding: 14px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        .exito {
-            background-color: #f0fff4;
-            color: #22543d;
-            border-left: 3px solid #48bb78;
-        }
-
-        .error {
-            background-color: #fff5f5;
-            color: #c53030;
-            border-left: 3px solid #e53e3e;
-        }
-
-        .volver {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .volver a {
-            color: #ed8936;
-            text-decoration: none;
-        }
-
-        .volver a:hover {
-            color: #c05621;
-            text-decoration: underline;
-        }
+        body {background: #f0f4f8; font-family: Arial; margin: 0; padding: 0; height: 100vh; display: flex; align-items: center; justify-content: center;}
+        .idioma {text-align: right; margin-bottom: 20px;}
+        .idioma a {color: #2b6cb0; text-decoration: none; margin: 0 5px;}
+        .idioma a.activo {font-weight: bold; border-bottom: 2px solid #2b6cb0;}
+        .contenedor {background: white; padding: 35px 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 380px;}
+        h2 {color: #2b6cb0; text-align: center; margin: 0 0 25px;}
+        label {display: block; margin: 15px 0 6px; color: #4a5568; font-weight: bold;}
+        input {width: 100%; padding: 11px; border: 2px solid #e2e8f0; border-radius: 8px; box-sizing: border-box; font-size: 15px;}
+        button {width: 100%; background: #38a169; color: white; border: none; padding: 12px; margin-top: 20px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;}
+        .enlaces {margin-top: 20px; text-align: center;}
+        .enlaces a {color: #2b6cb0; text-decoration: none; display: block; margin: 8px 0;}
     </style>
 </head>
 <body>
-
-    <h1>Crear Cuenta Nueva</h1>
-
+    <?php $lang = session()->get('idioma') ?? 'es'; ?>
     <div class="contenedor">
-        <?php if (session()->getFlashdata('exito')): ?>
-            <div class="mensaje exito">
-                <?= session()->getFlashdata('exito') ?>
-            </div>
-        <?php endif ?>
-
-        <?php if (session()->getFlashdata('error')): ?>
-            <div class="mensaje error">
-                <?= session()->getFlashdata('error') ?>
-            </div>
-        <?php endif ?>
-
+        <div class="idioma">
+            <a href="<?= base_url('idioma/es') ?>" class="<?= $lang === 'es' ? 'activo' : '' ?>">ES</a> |
+            <a href="<?= base_url('idioma/en') ?>" class="<?= $lang === 'en' ? 'activo' : '' ?>">EN</a>
+        </div>
+        <h2><?= $lang === 'en' ? 'Create New Account' : 'Crear Cuenta Nueva' ?></h2>
         <form action="<?= base_url('guardar-registro') ?>" method="post">
             <?= csrf_field() ?>
-
-            <label>Nombre completo:</label>
+            <label><?= $lang === 'en' ? 'Full Name:' : 'Nombre Completo:' ?></label>
             <input type="text" name="nombre" required>
-
-            <label>Correo electrónico:</label>
+            <label><?= $lang === 'en' ? 'Email:' : 'Correo Electrónico:' ?></label>
             <input type="email" name="correo" required>
-
-            <label>Contraseña:</label>
+            <label><?= $lang === 'en' ? 'Password:' : 'Contraseña:' ?></label>
             <input type="password" name="contrasena" required>
-
-            <button type="submit">Registrarme</button>
+            <button type="submit"><?= $lang === 'en' ? 'Register' : 'Registrarse' ?></button>
         </form>
-
-        <div class="volver">
-            <a href="<?= base_url('/') ?>">Ya tengo cuenta → Iniciar sesión</a>
+        <div class="enlaces">
+            <a href="<?= base_url('ingresar') ?>"><?= $lang === 'en' ? 'I already have an account' : 'Ya tengo cuenta' ?></a>
+            <a href="<?= base_url('/') ?>">← <?= $lang === 'en' ? 'Back' : 'Volver' ?></a>
         </div>
     </div>
-
 </body>
 </html>
