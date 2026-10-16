@@ -108,6 +108,18 @@
 </head>
 <body>
     <div class="encabezado">
+
+
+    <?php if (session()->getFlashdata('exito')): ?>
+        <div style="background:#f0fff4; color:#22543d; padding:12px; border-radius:8px; margin-bottom:20px; border-left:4px solid #48bb78;">
+            <?= session()->getFlashdata('exito') ?>
+        </div>
+    <?php endif ?>
+
+
+
+
+
         <h1>Bienvenido, <?= $nombre ?></h1>
         <div>
             <a href="<?= base_url('perfil') ?>" class="btn-perfil">Mi Perfil</a>
