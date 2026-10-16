@@ -19,6 +19,5 @@ $routes->post('guardar-tarea', 'Inicio::guardar');
 $routes->get('completar/(:num)', 'Inicio::completar/$1');
 $routes->get('eliminar/(:num)', 'Inicio::eliminar/$1');
 
-$routes->get('recuperar-clave', Inicio::'recuperar_clave');
-
-$routes->('enviar-recuperacion', Inicio::'enviar_recuperacion');
+$routes->get('recuperar-clave', 'Inicio::recuperar_clave');
+$routes->post('enviar-recuperacion', 'Inicio::enviar_recuperacion');
