@@ -86,6 +86,13 @@
 
             <button type="submit">Entrar</button>
         </form>
+
+        <p style="text-align: center; margin-top: 20px;">
+        <a href="<?= base_url('recuperar-clave') ?>" style="color: #4a90e2;">¿Olvidaste tu contraseña?</a>
+    </p>
+
+
+
     </div>
 
 </body>
