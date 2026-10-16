@@ -45,7 +45,7 @@
             <h3><?= $lang === 'en' ? 'Profile Photo' : 'Foto de Perfil' ?></h3>
             <div class="foto">
                 <?php if (!empty($usuario['foto'])): ?>
-                    <img src="<?= base_url('uploads/' . $usuario['foto']) ?>" alt="Foto de perfil">
+                    <img src="<?= base_url() ?>uploads/<?= $usuario['foto'] ?>" alt="Foto de perfil">
                 <?php else: ?>
                     <span>👤</span>
                 <?php endif ?>
