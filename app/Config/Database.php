@@ -6,6 +6,8 @@ use CodeIgniter\Database\Config;
 
 class Database extends Config
 {
+    public $defaultGroup = 'default';  // ← ESTA FALTABA
+
     public $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
