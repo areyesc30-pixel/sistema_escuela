@@ -22,6 +22,7 @@ class Inicio extends BaseController
     {
         $correo = $this->request->getPost('correo');
         $clave = $this->request->getPost('contrasena');
+        $lang = session()->get('idioma') ?? 'es';
 
         $model = new \App\Models\UsuarioModel();
         $usuario = $model->where('correo', $correo)->first();
@@ -33,7 +34,8 @@ class Inicio extends BaseController
                 'correo' => $usuario['correo'],
                 'ingresado' => true
             ]);
-            session()->setFlashdata('exito', 'Sesión iniciada con éxito. ¡Bienvenido, ' . $usuario['nombre'] . '!');
+            $mensaje = $lang === 'en' ? 'Login successful. Welcome, ' : 'Sesión iniciada con éxito. ¡Bienvenido, ';
+            session()->setFlashdata('exito', $mensaje . $usuario['nombre'] . '!');
             return redirect()->to(base_url('tareas'));
         }
 
@@ -44,11 +46,11 @@ class Inicio extends BaseController
                 'correo' => 'areyesc30@miumg.edu.gt',
                 'ingresado' => true
             ]);
-            session()->setFlashdata('exito', 'Sesión iniciada con éxito. ¡Bienvenido, Alex!');
+            session()->setFlashdata('exito', $lang === 'en' ? 'Login successful. Welcome, Alex!' : 'Sesión iniciada con éxito. ¡Bienvenido, Alex!');
             return redirect()->to(base_url('tareas'));
         }
         
-        session()->setFlashdata('error', 'Correo o contraseña incorrectos');
+        session()->setFlashdata('error', $lang === 'en' ? 'Incorrect email or password' : 'Correo o contraseña incorrectos');
         return redirect()->back();
     }
 
@@ -59,7 +61,6 @@ class Inicio extends BaseController
         }
 
         $model = new \App\Models\TareaModel();
-        
         $buscar = $this->request->getGet('buscar');
         
         if ($buscar) {
@@ -70,18 +71,13 @@ class Inicio extends BaseController
                 ->orLike('descripcion', $buscar)
                 ->groupEnd()
                 ->findAll();
-            
             $datos['busqueda'] = $buscar;
         } else {
-            $datos['tareas'] = $model
-                ->where('usuario_id', session()->get('id'))
-                ->findAll();
-            
+            $datos['tareas'] = $model->where('usuario_id', session()->get('id'))->findAll();
             $datos['busqueda'] = '';
         }
         
         $datos['nombre'] = session()->get('nombre');
-        
         return view('lista_tareas', $datos);
     }
 
@@ -90,17 +86,15 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('ingresar'));
         }
-
+        $lang = session()->get('idioma') ?? 'es';
         $model = new \App\Models\TareaModel();
-        
         $model->save([
             'usuario_id' => session()->get('id'),
             'titulo' => $this->request->getPost('titulo'),
             'descripcion' => $this->request->getPost('descripcion'),
-            'estado' => 'pendiente'
+            'estado' => $lang === 'en' ? 'Pending' : 'Pendiente'
         ]);
-
-        session()->setFlashdata('exito', 'Tarea guardada');
+        session()->setFlashdata('exito', $lang === 'en' ? 'Task saved' : 'Tarea guardada');
         return redirect()->to(base_url('tareas'));
     }
 
@@ -109,10 +103,9 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('ingresar'));
         }
-
+        $lang = session()->get('idioma') ?? 'es';
         $model = new \App\Models\TareaModel();
-        $model->update($id, ['estado' => 'completada']);
-        
+        $model->update($id, ['estado' => $lang === 'en' ? 'Completed' : 'Completada']);
         return redirect()->to(base_url('tareas'));
     }
 
@@ -121,10 +114,8 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('ingresar'));
         }
-
         $model = new \App\Models\TareaModel();
         $model->delete($id);
-        
         return redirect()->to(base_url('tareas'));
     }
 
@@ -133,14 +124,9 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('ingresar'));
         }
-
         $model = new \App\Models\TareaModel();
         $tarea = $model->find($id);
-        
-        if (!$tarea) {
-            return redirect()->to(base_url('tareas'));
-        }
-        
+        if (!$tarea) return redirect()->to(base_url('tareas'));
         return view('editar_tarea', ['tarea' => $tarea]);
     }
 
@@ -149,17 +135,13 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('ingresar'));
         }
-
+        $lang = session()->get('idioma') ?? 'es';
         $model = new \App\Models\TareaModel();
-        
-        $datos = [
+        $model->update($id, [
             'titulo' => $this->request->getPost('titulo'),
             'descripcion' => $this->request->getPost('descripcion')
-        ];
-        
-        $model->update($id, $datos);
-        
-        session()->setFlashdata('exito', 'Tarea actualizada');
+        ]);
+        session()->setFlashdata('exito', $lang === 'en' ? 'Task updated' : 'Tarea actualizada');
         return redirect()->to(base_url('tareas'));
     }
 
@@ -168,11 +150,8 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('ingresar'));
         }
-
         $model = new \App\Models\UsuarioModel();
-        $usuario = $model->find(session()->get('id'));
-        
-        return view('perfil', ['usuario' => $usuario]);
+        return view('perfil', ['usuario' => $model->find(session()->get('id'))]);
     }
 
     public function cambiar_contrasena()
@@ -180,7 +159,7 @@ class Inicio extends BaseController
         if (!session()->get('ingresado')) {
             return redirect()->to(base_url('ingresar'));
         }
-
+        $lang = session()->get('idioma') ?? 'es';
         $model = new \App\Models\UsuarioModel();
         $usuario = $model->find(session()->get('id'));
         
@@ -188,36 +167,23 @@ class Inicio extends BaseController
         $nueva = $this->request->getPost('contrasena_nueva');
         $confirmar = $this->request->getPost('confirmar_nueva');
         
-        $contrasena_correcta = false;
+        $correcta = ($actual === '123456' || password_verify($actual, $usuario['contrasena']));
         
-        if ($actual === '123456') {
-            $contrasena_correcta = true;
-        } else {
-            if (password_verify($actual, $usuario['contrasena'])) {
-                $contrasena_correcta = true;
-            }
-        }
-        
-        if (!$contrasena_correcta) {
-            session()->setFlashdata('error', 'La contraseña actual no es correcta');
+        if (!$correcta) {
+            session()->setFlashdata('error', $lang === 'en' ? 'Current password incorrect' : 'Contraseña actual incorrecta');
             return redirect()->to(base_url('perfil'));
         }
-        
         if ($nueva !== $confirmar) {
-            session()->setFlashdata('error', 'Las contraseñas nuevas no coinciden');
+            session()->setFlashdata('error', $lang === 'en' ? 'Passwords do not match' : 'Las contraseñas no coinciden');
             return redirect()->to(base_url('perfil'));
         }
-        
         if (strlen($nueva) < 6) {
-            session()->setFlashdata('error', 'La contraseña debe tener al menos 6 caracteres');
+            session()->setFlashdata('error', $lang === 'en' ? 'Minimum 6 characters' : 'Mínimo 6 caracteres');
             return redirect()->to(base_url('perfil'));
         }
         
-        $model->update($usuario['id'], [
-            'contrasena' => password_hash($nueva, PASSWORD_DEFAULT)
-        ]);
-        
-        session()->setFlashdata('exito', 'Contraseña actualizada correctamente');
+        $model->update($usuario['id'], ['contrasena' => password_hash($nueva, PASSWORD_DEFAULT)]);
+        session()->setFlashdata('exito', $lang === 'en' ? 'Password updated' : 'Contraseña actualizada');
         return redirect()->to(base_url('perfil'));
     }
 
@@ -229,18 +195,15 @@ class Inicio extends BaseController
 
     public function guardar_registro()
     {
+        $lang = session()->get('idioma') ?? 'es';
         $model = new \App\Models\UsuarioModel();
-        
-        $datos = [
+        $model->save([
             'nombre' => $this->request->getPost('nombre'),
             'correo' => $this->request->getPost('correo'),
             'contrasena' => password_hash($this->request->getPost('contrasena'), PASSWORD_DEFAULT),
             'rol' => 'usuario'
-        ];
-        
-        $model->save($datos);
-        
-        session()->setFlashdata('exito', 'Cuenta creada. Ya puedes iniciar sesión');
+        ]);
+        session()->setFlashdata('exito', $lang === 'en' ? 'Account created. You can now sign in.' : 'Cuenta creada. Ya puedes iniciar sesión.');
         return redirect()->to(base_url('ingresar'));
     }
 
@@ -252,8 +215,19 @@ class Inicio extends BaseController
 
     public function enviar_recuperacion()
     {
-        session()->setFlashdata('exito', 'Si el correo existe, recibirás instrucciones');
+        $lang = session()->get('idioma') ?? 'es';
+        session()->setFlashdata('exito', $lang === 'en' ? 'If the email exists, you will receive instructions' : 'Si el correo existe, recibirás instrucciones');
         return redirect()->to(base_url('ingresar'));
+    }
+
+    public function idioma($codigo)
+    {
+        if ($codigo === 'en') {
+            session()->set('idioma', 'en');
+        } else {
+            session()->set('idioma', 'es');
+        }
+        return redirect()->back();
     }
 
     public function salir()
