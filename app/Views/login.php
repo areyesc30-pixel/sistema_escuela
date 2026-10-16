@@ -3,64 +3,89 @@
 <head>
     <title>Iniciar Sesión</title>
     <style>
-        body {
-            background-color: #cce0f5;
-            font-family: Arial;
+                    body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Arial;
             margin: 0;
             padding: 20px;
         }
 
         h1 {
-            color: #1a2e44;
+            color: #2b6cb0;
             text-align: center;
             margin-bottom: 30px;
         }
 
         .contenedor {
-            background-color: white;
-            padding: 25px;
+            background: white;
+            padding: 30px;
             margin: 0 auto;
-            max-width: 380px;
-            border-radius: 8px;
-            border: 1px solid #99b3cc;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
         }
 
         label {
             display: block;
-            margin-bottom: 5px;
-            margin-top: 15px;
-            color: #333;
+            margin-bottom: 6px;
+            margin-top: 18px;
+            color: #2c5282;
+            font-weight: 500;
         }
 
         input {
             width: 100%;
-            padding: 8px;
-            border: 1px solid #99b3cc;
-            border-radius: 4px;
+            padding: 11px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
             box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3182ce;
         }
 
         button {
-            background-color: #4a90e2;
+            background-color: #3182ce;
             color: white;
             border: none;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 12px;
+            margin-top: 25px;
             width: 100%;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         button:hover {
-            background-color: #357abd;
+            background-color: #2b6cb0;
         }
 
-        .error {
-            background-color: #ffebee;
-            color: #c62828;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 4px;
+        .mensaje-error {
+            background-color: #fff5f5;
+            color: #c53030;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 3px solid #e53e3e;
+        }
+
+        .enlace {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .enlace a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        .enlace a:hover {
+            color: #2c5282;
+            text-decoration: underline;
         }
     </style>
 </head>
