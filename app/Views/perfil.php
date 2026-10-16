@@ -75,8 +75,8 @@
         <div class="bloque">
             <h3><?= $lang === 'en' ? 'Account Information' : 'Datos de la Cuenta' ?></h3>
             
-            <a href="<?= base_url('editar-usuario') ?>" class="btn-azul">
-                ✏️ <?= $lang === 'en' ? 'Edit Information' : 'Editar Información' ?>
+                       <a href="<?= base_url('editar-usuario') ?>" style="display:inline-block; background:#2b6cb0; color:white; padding:10px 20px; border-radius:8px; text-decoration:none; border:none;">
+                <?= $lang === 'en' ? 'Edit Information' : 'Editar Información' ?>
             </a>
             
             <div class="dato">
