@@ -4,14 +4,124 @@
             <meta charset="UFT-8">
             <title>Mis Tareas</title>
             <style>
-                body { font-family: Arial; max-widith: 700px; margin: 30px auto; padding: 20px;}
-                .salir { text-align: right; }
-        .salir a { color: red; text-decoration: none; }
-        form { background: #f5f5f5; padding: 20px; margin-bottom: 25px; border-radius: 8px; }
-        input, textarea { width: 100%; padding: 8px; margin: 5px 0 15px 0; border: 1px solid #ddd; border-radius: 4px; }
-        button { background: #28a745; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
-        .tarea { border-bottom: 1px solid #ddd; padding: 15px 0; }
-        .hecha { text-decoration: line-through; color: #888; }
+                        body {
+            background: linear-gradient(135deg, #00C9FF, #92FE9D);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .encabezado {
+            background: white;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .encabezado h1 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .btn-salir {
+            background: linear-gradient(90deg, #eb3349, #f45c43);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .btn-salir:hover {
+            transform: scale(1.05);
+        }
+
+        .formulario, .tarea {
+            background: white;
+            padding: 25px;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e8e8e8;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #00C9FF;
+        }
+
+        button {
+            background: linear-gradient(90deg, #00C9FF, #92FE9D);
+            color: #2c3e50;
+            border: none;
+            padding: 12px 25px;
+            margin-top: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .completada {
+            text-decoration: line-through;
+            color: #95a5a6;
+        }
+
+        .acciones a {
+            margin-right: 15px;
+            font-size: 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .completar {
+            color: #27ae60;
+        }
+
+        .completar:hover {
+            color: #219653;
+        }
+
+        .borrar {
+            color: #e74c3c;
+        }
+
+        .borrar:hover {
+            color: #c0392b;
+        }
         <style> 
         </head> 
         <body> 
@@ -40,4 +150,4 @@
     <?php endif ?>
     </body>
     </html>
-    
+

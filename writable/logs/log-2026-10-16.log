@@ -1,0 +1,688 @@
+DEBUG - 2026-10-16 01:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 01:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 01:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 01:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 01:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 01:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 01:42:46 --> Error: Class "Config\Database" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Database.php on line 272.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(76): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 2 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 3 SYSTEMPATH\Config\Services.php(812): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 4 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 5 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 6 SYSTEMPATH\Config\Services.php(807): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+ 7 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+ 9 SYSTEMPATH\Common.php(1095): CodeIgniter\Config\BaseService::get('toolbar')
+10 APPPATH\Config\Events.php(49): service('toolbar')
+11 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+12 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+13 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 01:49:01 --> Error: Class "Config\Database" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Database.php on line 272.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(76): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 2 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 3 SYSTEMPATH\Config\Services.php(812): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 4 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 5 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 6 SYSTEMPATH\Config\Services.php(807): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+ 7 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+ 9 SYSTEMPATH\Common.php(1095): CodeIgniter\Config\BaseService::get('toolbar')
+10 APPPATH\Config\Events.php(49): service('toolbar')
+11 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+12 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+13 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 01:49:04 --> Error: Class "Config\Database" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Database.php on line 272.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(76): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 2 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 3 SYSTEMPATH\Config\Services.php(812): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 4 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 5 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 6 SYSTEMPATH\Config\Services.php(807): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+ 7 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+ 9 SYSTEMPATH\Common.php(1095): CodeIgniter\Config\BaseService::get('toolbar')
+10 APPPATH\Config\Events.php(49): service('toolbar')
+11 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+12 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+13 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 01:49:29 --> Error: Class "Config\Database" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Database.php on line 272.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(76): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 2 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 3 SYSTEMPATH\Config\Services.php(812): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 4 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 5 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 6 SYSTEMPATH\Config\Services.php(807): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+ 7 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+ 9 SYSTEMPATH\Common.php(1095): CodeIgniter\Config\BaseService::get('toolbar')
+10 APPPATH\Config\Events.php(49): service('toolbar')
+11 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+12 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+13 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 01:49:29 --> Error: Class "Config\Database" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Database.php on line 272.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(76): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 2 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 3 SYSTEMPATH\Config\Services.php(812): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 4 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 5 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 6 SYSTEMPATH\Config\Services.php(807): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+ 7 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+ 9 SYSTEMPATH\Common.php(1095): CodeIgniter\Config\BaseService::get('toolbar')
+10 APPPATH\Config\Events.php(49): service('toolbar')
+11 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+12 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+13 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 01:52:21 --> Error: Call to undefined method Config\Database::getConnections()
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Database.php on line 272.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(76): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 2 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 3 SYSTEMPATH\Config\Services.php(812): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 4 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 5 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 6 SYSTEMPATH\Config\Services.php(807): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+ 7 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+ 9 SYSTEMPATH\Common.php(1095): CodeIgniter\Config\BaseService::get('toolbar')
+10 APPPATH\Config\Events.php(49): service('toolbar')
+11 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+12 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+13 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 01:52:29 --> Error: Call to undefined method Config\Database::getConnections()
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Database.php on line 272.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(76): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 2 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 3 SYSTEMPATH\Config\Services.php(812): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 4 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 5 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 6 SYSTEMPATH\Config\Services.php(807): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+ 7 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+ 8 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+ 9 SYSTEMPATH\Common.php(1095): CodeIgniter\Config\BaseService::get('toolbar')
+10 APPPATH\Config\Events.php(49): service('toolbar')
+11 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+12 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+13 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 01:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 01:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 01:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 01:55:02 --> ErrorException: Undefined property: Config\Database::$defaultGroup
+[Method: GET, Route: tareas]
+in SYSTEMPATH\Database\Config.php on line 63.
+ 1 SYSTEMPATH\Database\Config.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Database::$defaultGroup', 'C:\\xampp\\htdocs\\sistema_tareas\\system\\Database\\Config.php', 63)
+ 2 SYSTEMPATH\Model.php(153): CodeIgniter\Database\Config::connect(null)
+ 3 APPPATH\Controllers\Inicio.php(45): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->tareas()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 01:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-16 02:00:28 --> Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 294.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(294): mysqli->query('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(905): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(822): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (:usuario_id:, :titulo:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Inicio.php(61): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->guardar()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 02:00:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+[Method: POST, Route: guardar-tarea]
+in SYSTEMPATH\Database\BaseConnection.php on line 860.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (:usuario_id:, :titulo:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Inicio.php(61): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->guardar()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 02:00:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 304.
+ 1 SYSTEMPATH\Database\BaseConnection.php(905): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(822): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (:usuario_id:, :titulo:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Inicio.php(61): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->guardar()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 02:00:28 --> [Caused by] mysqli_sql_exception: Unknown column 'titulo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 294.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(294): mysqli->query('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(905): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(822): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (1, \'Tarea de précálculo\', \'Tarea de precálculo de la semana 10, funciones cuadráticas \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tareas` (`usuario_id`, `titulo`, `descripcion`) VALUES (:usuario_id:, :titulo:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Inicio.php(61): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->guardar()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 02:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 02:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 03:59:37 --> ParseError: syntax error, unexpected single-quoted string "recuperar_clave"
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 03:59:38 --> ParseError: syntax error, unexpected single-quoted string "recuperar_clave"
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 04:00:25 --> ParseError: syntax error, unexpected single-quoted string "recuperar_clave"
+[Method: GET, Route: tareas]
+in APPPATH\Config\Routes.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 04:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 04:32:55 --> ErrorException: Undefined array key "contrasena"
+[Method: POST, Route: ingresar]
+in APPPATH\Controllers\Inicio.php on line 22.
+ 1 APPPATH\Controllers\Inicio.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 04:33:02 --> ErrorException: Undefined array key "contrasena"
+[Method: POST, Route: ingresar]
+in APPPATH\Controllers\Inicio.php on line 22.
+ 1 APPPATH\Controllers\Inicio.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 04:33:49 --> ErrorException: Undefined array key "contrasena"
+[Method: POST, Route: ingresar]
+in APPPATH\Controllers\Inicio.php on line 22.
+ 1 APPPATH\Controllers\Inicio.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 04:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 04:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 04:48:55 --> ErrorException: Undefined array key "contrasena"
+[Method: POST, Route: ingresar]
+in APPPATH\Controllers\Inicio.php on line 22.
+ 1 APPPATH\Controllers\Inicio.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 05:11:55 --> ErrorException: Undefined array key "contrasena"
+[Method: POST, Route: ingresar]
+in APPPATH\Controllers\Inicio.php on line 22.
+ 1 APPPATH\Controllers\Inicio.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 05:16:50 --> ErrorException: Undefined array key "contrasena"
+[Method: POST, Route: ingresar]
+in APPPATH\Controllers\Inicio.php on line 22.
+ 1 APPPATH\Controllers\Inicio.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 05:17:09 --> ErrorException: Undefined array key "contrasena"
+[Method: POST, Route: ingresar]
+in APPPATH\Controllers\Inicio.php on line 22.
+ 1 APPPATH\Controllers\Inicio.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 05:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 05:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 06:07:18 --> ErrorException: Undefined variable $nombre
+[Method: GET, Route: tareas]
+in APPPATH\Views\lista_tareas.php on line 92.
+ 1 APPPATH\Views\lista_tareas.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Views\\lista_tareas.php', 92)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\sistema_tareas\\app\\Views\\lista_tareas.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('lista_tareas', [], true)
+ 5 APPPATH\Controllers\Inicio.php(70): view('lista_tareas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->tareas()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 06:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 06:09:42 --> ErrorException: Undefined variable $nombre
+[Method: GET, Route: tareas]
+in APPPATH\Views\lista_tareas.php on line 79.
+ 1 APPPATH\Views\lista_tareas.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'C:\\xampp\\htdocs\\sistema_tareas\\app\\Views\\lista_tareas.php', 79)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\sistema_tareas\\app\\Views\\lista_tareas.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('lista_tareas', [], true)
+ 5 APPPATH\Controllers\Inicio.php(70): view('lista_tareas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->tareas()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 06:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 06:48:42 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: /]
+in APPPATH\Controllers\Inicio.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Inicio')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Inicio')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('/')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 06:48:43 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: /]
+in APPPATH\Controllers\Inicio.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Inicio')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Inicio')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('/')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 06:48:47 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: /]
+in APPPATH\Controllers\Inicio.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Inicio')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Inicio')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('/')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 06:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 06:54:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ingresar.php"
+[Method: GET, Route: ingresar]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ingresar.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('ingresar', [], true)
+ 3 APPPATH\Controllers\Inicio.php(19): view('ingresar')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 06:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 06:54:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ingresar.php"
+[Method: GET, Route: ingresar]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ingresar.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('ingresar', [], true)
+ 3 APPPATH\Controllers\Inicio.php(19): view('ingresar')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Inicio->ingresar()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 06:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 06:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-16 07:15:46 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: tareas]
+in APPPATH\Controllers\Inicio.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Inicio')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Inicio')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('tareas')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 07:17:31 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: tareas]
+in APPPATH\Controllers\Inicio.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Inicio')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Inicio')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('tareas')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 07:18:37 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: tareas]
+in APPPATH\Controllers\Inicio.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Inicio')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Inicio')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('tareas')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-16 07:20:15 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: tareas]
+in APPPATH\Controllers\Inicio.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema_tareas\\app\\Controllers\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Inicio')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Inicio')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('tareas')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(297): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(52): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(18): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-10-16 07:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-16 07:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
