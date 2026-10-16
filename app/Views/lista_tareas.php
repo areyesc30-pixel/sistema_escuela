@@ -18,12 +18,29 @@
             justify-content: space-between;
             align-items: center;
         }
+        .encabezado h1 {
+            margin: 0;
+            color: #2b6cb0;
+            font-size: 22px;
+        }
+        .btn-perfil {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+        .btn-perfil:hover {
+            color: #2c5282;
+        }
         .btn-salir {
             background-color: #e74c3c;
             color: white;
             padding: 8px 15px;
             text-decoration: none;
             border-radius: 4px;
+        }
+        .btn-salir:hover {
+            background-color: #c0392b;
         }
         .formulario, .tarea {
             background-color: white;
@@ -35,6 +52,8 @@
             display: block;
             margin-top: 10px;
             margin-bottom: 5px;
+            color: #2f855a;
+            font-weight: 500;
         }
         input, textarea {
             width: 100%;
@@ -43,14 +62,21 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3182ce;
+        }
         button {
-            background-color: #4a90e2;
+            background-color: #38a169;
             color: white;
             border: none;
             padding: 10px 20px;
             margin-top: 15px;
             border-radius: 4px;
             cursor: pointer;
+        }
+        button:hover {
+            background-color: #2f855a;
         }
         .completada {
             text-decoration: line-through;
@@ -69,15 +95,24 @@
         .completar {
             color: #27ae60;
         }
+        .completar:hover {
+            color: #219653;
+        }
         .borrar {
             color: #e74c3c;
+        }
+        .borrar:hover {
+            color: #c0392b;
         }
     </style>
 </head>
 <body>
     <div class="encabezado">
         <h1>Bienvenido, <?= $nombre ?></h1>
-        <a href="<?= base_url('salir') ?>" class="btn-salir">Cerrar sesión</a>
+        <div>
+            <a href="<?= base_url('perfil') ?>" class="btn-perfil">Mi Perfil</a>
+            <a href="<?= base_url('salir') ?>" class="btn-salir">Cerrar sesión</a>
+        </div>
     </div>
 
     <!-- BUSCADOR -->
@@ -109,7 +144,7 @@
     <?php endif ?>
 
     <div class="formulario">
-        <h3>Agregar nueva tarea</h3>
+        <h3 style="color:#2b6cb0; margin-top:0;">Agregar nueva tarea</h3>
         <form action="<?= base_url('guardar-tarea') ?>" method="post">
             <?= csrf_field() ?>
             
@@ -121,18 +156,18 @@
         </form>
     </div>
 
-    <h3>Mis Tareas</h3>
+    <h3 style="color:#2b6cb0;">Mis Tareas</h3>
     <?php if (empty($tareas) && empty($busqueda)): ?>
-        <p>No tienes tareas registradas. Agrega una arriba.</p>
+        <p style="color:#4a5568;">No tienes tareas registradas. Agrega una arriba.</p>
     <?php else: ?>
         <?php foreach ($tareas as $tarea): ?>
             <div class="tarea">
-                <h4 class="<?= $tarea['estado'] === 'completada' ? 'completada' : '' ?>">
+                <h4 class="<?= $tarea['estado'] === 'completada' ? 'completada' : '' ?>" style="color:#2d3748; margin:0 0 8px 0;">
                     <?= esc($tarea['titulo']) ?>
                 </h4>
-                <p><?= esc($tarea['descripcion']) ?></p>
-                <small>Estado: <?= $tarea['estado'] ?></small>
-                <div class="acciones">
+                <p style="color:#4a5568; margin:0 0 8px 0;"><?= esc($tarea['descripcion']) ?></p>
+                <small style="color:#718096;">Estado: <?= $tarea['estado'] ?></small>
+                <div class="acciones" style="margin-top:10px;">
                     <a href="<?= base_url('editar-tarea/' . $tarea['id']) ?>" class="editar">Editar</a>
                     <?php if ($tarea['estado'] !== 'completada'): ?>
                         <a href="<?= base_url('completar/' . $tarea['id']) ?>" class="completar">Marcar completada</a>
