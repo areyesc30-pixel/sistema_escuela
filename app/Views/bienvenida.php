@@ -29,7 +29,7 @@
             <a href="<?= base_url('registro') ?>" class="boton btn-registrar">Create Account</a>
         <?php else: ?>
             <h1>¡Bienvenido!</h1>
-            <p class="subtitulo">Sistema de Gestión de Tareas</p>
+            <p class="subtitulo">Gestión de Tareas</p>
             <a href="<?= base_url('ingresar') ?>" class="boton btn-ingresar">Iniciar Sesión</a>
             <a href="<?= base_url('registro') ?>" class="boton btn-registrar">Crear Cuenta</a>
         <?php endif ?>
