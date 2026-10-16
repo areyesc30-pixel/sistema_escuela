@@ -1,38 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="<?= session()->get('idioma_actual') ?? 'es' ?>">
 <head>
-    <title><?= ($lang ?? 'es') === 'en' ? 'Recover Password' : 'Recuperar Contraseña' ?></title>
+    <meta charset="UTF-8">
+    <title><?= (session()->get('idioma_actual') ?? 'es') === 'en' ? 'Recover Password' : 'Recuperar Contraseña' ?></title>
     <style>
-        body {background: #f0f4f8; font-family: Arial; margin: 0; padding: 0; height: 100vh; display: flex; align-items: center; justify-content: center;}
-        .idioma {text-align: right; margin-bottom: 20px;}
-        .idioma a {color: #2b6cb0; text-decoration: none; margin: 0 5px;}
-        .idioma a.activo {font-weight: bold; border-bottom: 2px solid #2b6cb0;}
-        .contenedor {background: white; padding: 35px 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 380px;}
-        h2 {color: #2b6cb0; text-align: center; margin: 0 0 25px;}
-        label {display: block; margin: 15px 0 6px; color: #4a5568; font-weight: bold;}
-        input {width: 100%; padding: 11px; border: 2px solid #e2e8f0; border-radius: 8px; box-sizing: border-box; font-size: 15px;}
-        button {width: 100%; background: #38a169; color: white; border: none; padding: 12px; margin-top: 20px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;}
-        .enlaces {margin-top: 20px; text-align: center;}
-        .enlaces a {color: #2b6cb0; text-decoration: none; display: block; margin: 8px 0;}
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #f0f4f8; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .caja { background: white; padding: 35px; border-radius: 12px; width: 100%; max-width: 420px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .idiomas { text-align: right; margin-bottom: 20px; }
+        .idiomas a { margin: 0 5px; text-decoration: none; font-weight: bold; }
+        .activo { color: #2b6cb0; border-bottom: 2px solid #2b6cb0; }
+        .inactivo { color: #718096; }
+        h1 { text-align: center; color: #2b6cb0; margin-bottom: 25px; font-size: 24px; }
+        label { display: block; margin: 15px 0 6px; color: #4a5568; font-weight: bold; }
+        input { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px; }
+        button { width: 100%; background: #2b6cb0; color: white; border: none; padding: 13px; border-radius: 8px; font-weight: bold; font-size: 16px; margin-top: 20px; cursor: pointer; }
+        .mensaje { padding: 12px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .exito { background: #f0fff4; color: #22543d; border-left: 4px solid #38a169; }
+        .error { background: #fff5f5; color: #c53030; border-left: 4px solid #e53e3e; }
+        .enlace { display: block; text-align: center; margin-top: 18px; color: #2b6cb0; text-decoration: none; }
     </style>
 </head>
 <body>
-    <?php $lang = session()->get('idioma') ?? 'es'; ?>
-    <div class="contenedor">
-        <div class="idioma">
-            <a href="<?= base_url('idioma/es') ?>" class="<?= $lang === 'es' ? 'activo' : '' ?>">ES</a> |
-            <a href="<?= base_url('idioma/en') ?>" class="<?= $lang === 'en' ? 'activo' : '' ?>">EN</a>
+    <?php $idioma = session()->get('idioma_actual') ?? 'es'; ?>
+    <div class="caja">
+        <div class="idiomas">
+            <a href="<?= base_url('cambiar-idioma/es') ?>" class="<?= $idioma==='es'?'activo':'inactivo' ?>">ES</a> |
+            <a href="<?= base_url('cambiar-idioma/en') ?>" class="<?= $idioma==='en'?'activo':'inactivo' ?>">EN</a>
         </div>
-        <h2><?= $lang === 'en' ? 'Recover Password' : 'Recuperar Contraseña' ?></h2>
+
+        <h1><?= $idioma==='en'?'Recover Password':'Recuperar Contraseña' ?></h1>
+
+        <?php if (session()->getFlashdata('exito')): ?>
+            <div class="mensaje exito"><?= session()->getFlashdata('exito') ?></div>
+        <?php endif ?>
+
         <form action="<?= base_url('enviar-recuperacion') ?>" method="post">
             <?= csrf_field() ?>
-            <label><?= $lang === 'en' ? 'Enter your email:' : 'Ingresa tu correo:' ?></label>
+            <label><?= $idioma==='en'?'Email Address:':'Correo Electrónico:' ?></label>
             <input type="email" name="correo" required>
-            <button type="submit"><?= $lang === 'en' ? 'Send Instructions' : 'Enviar Instrucciones' ?></button>
+            
+            <button type="submit"><?= $idioma==='en'?'Send Instructions':'Enviar Instrucciones' ?></button>
         </form>
-        <div class="enlaces">
-            <a href="<?= base_url('ingresar') ?>">← <?= $lang === 'en' ? 'Back to Login' : 'Volver al Inicio de Sesión' ?></a>
-        </div>
+
+        <a href="<?= base_url('ingresar') ?>" class="enlace">
+            ← <?= $idioma==='en'?'Back to Sign In':'Volver a Iniciar Sesión' ?>
+        </a>
     </div>
 </body>
 </html>
