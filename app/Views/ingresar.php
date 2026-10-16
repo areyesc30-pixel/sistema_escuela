@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Iniciar Sesión</title>
+    <title><?= (session()->get('idioma') ?? 'es') === 'en' ? 'Sign In' : 'Iniciar Sesión' ?></title>
     <style>
         body {
             background-color: #f0f4f8;
@@ -12,6 +12,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .idioma {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .idioma a {
+            color: #2b6cb0;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .idioma a.activo {
+            font-weight: bold;
+            border-bottom: 2px solid #2b6cb0;
         }
         .contenedor {
             background: white;
@@ -58,9 +71,6 @@
             font-weight: bold;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #2f855a;
-        }
         .mensaje {
             padding: 12px;
             margin-bottom: 20px;
@@ -82,17 +92,18 @@
             display: block;
             margin: 8px 0;
         }
-        .enlaces a:hover {
-            text-decoration: underline;
-        }
-        .volver {
-            margin-top: 15px;
-        }
     </style>
 </head>
 <body>
     <div class="contenedor">
-        <h2>Iniciar Sesión</h2>
+        <div class="idioma">
+            <a href="<?= base_url('idioma/es') ?>" class="<?= (session()->get('idioma') ?? 'es') === 'es' ? 'activo' : '' ?>">ES</a> |
+            <a href="<?= base_url('idioma/en') ?>" class="<?= (session()->get('idioma') ?? 'es') === 'en' ? 'activo' : '' ?>">EN</a>
+        </div>
+
+        <?php $lang = session()->get('idioma') ?? 'es'; ?>
+
+        <h2><?= $lang === 'en' ? 'Sign In' : 'Iniciar Sesión' ?></h2>
 
         <?php if (session()->getFlashdata('error')): ?>
             <div class="mensaje error"><?= session()->getFlashdata('error') ?></div>
@@ -101,19 +112,25 @@
         <form action="<?= base_url('entrar') ?>" method="post">
             <?= csrf_field() ?>
 
-            <label>Correo electrónico:</label>
+            <label><?= $lang === 'en' ? 'Email:' : 'Correo electrónico:' ?></label>
             <input type="email" name="correo" required>
 
-            <label>Contraseña:</label>
+            <label><?= $lang === 'en' ? 'Password:' : 'Contraseña:' ?></label>
             <input type="password" name="contrasena" required>
 
-            <button type="submit">Ingresar</button>
+            <button type="submit"><?= $lang === 'en' ? 'Login' : 'Ingresar' ?></button>
         </form>
 
         <div class="enlaces">
-            <a href="<?= base_url('recuperar-clave') ?>">¿Olvidaste tu contraseña?</a>
-            <a href="<?= base_url('registro') ?>">Crear cuenta nueva</a>
-            <a href="<?= base_url('/') ?>" class="volver">← Volver</a>
+            <a href="<?= base_url('recuperar-clave') ?>">
+                <?= $lang === 'en' ? 'Forgot password?' : '¿Olvidaste tu contraseña?' ?>
+            </a>
+            <a href="<?= base_url('registro') ?>">
+                <?= $lang === 'en' ? 'Create new account' : 'Crear cuenta nueva' ?>
+            </a>
+            <a href="<?= base_url('/') ?>">
+                <?= $lang === 'en' ? '← Back' : '← Volver' ?>
+            </a>
         </div>
     </div>
 </body>
