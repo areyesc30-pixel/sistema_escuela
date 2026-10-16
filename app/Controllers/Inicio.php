@@ -7,7 +7,6 @@ use App\Models\UsuarioModel;
 
 class Inicio extends BaseController
 {
-    // PANTALLA DE BIENVENIDA
     public function index()
     {
         return view('bienvenida');
@@ -21,7 +20,13 @@ class Inicio extends BaseController
 
     public function entrar()
     {
-                if ($usuario && password_verify($clave, $usuario['contrasena'])) {
+        $correo = $this->request->getPost('correo');
+        $clave = $this->request->getPost('contrasena');
+
+        $model = new \App\Models\UsuarioModel();
+        $usuario = $model->where('correo', $correo)->first();
+
+        if ($usuario && password_verify($clave, $usuario['contrasena'])) {
             session()->set([
                 'id' => $usuario['id'],
                 'nombre' => $usuario['nombre'],
@@ -42,6 +47,10 @@ class Inicio extends BaseController
             session()->setFlashdata('exito', 'Sesión iniciada con éxito. ¡Bienvenido, Alex!');
             return redirect()->to(base_url('tareas'));
         }
+        
+        session()->setFlashdata('error', 'Correo o contraseña incorrectos');
+        return redirect()->back();
+    }
 
     public function tareas()
     {
@@ -56,9 +65,10 @@ class Inicio extends BaseController
         if ($buscar) {
             $datos['tareas'] = $model
                 ->where('usuario_id', session()->get('id'))
+                ->groupStart()
                 ->like('titulo', $buscar)
                 ->orLike('descripcion', $buscar)
-                ->where('usuario_id', session()->get('id'))
+                ->groupEnd()
                 ->findAll();
             
             $datos['busqueda'] = $buscar;
