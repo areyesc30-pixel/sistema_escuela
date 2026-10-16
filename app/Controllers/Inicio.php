@@ -11,22 +11,30 @@ class Inicio extends BaseController
         return view('login');
     }
 
-    public function ingresar()
+        public function ingresar()
     {
         $correo = $this->request->getPost('correo');
         $clave = $this->request->getPost('contrasena');
 
-        $usuario_valido = [
-            'correo' => 'areyesc30@miumg.edu.gt',
-            'contrasena' => '123456',
-            'nombre' => 'Alex Fernando Reyes'
-        ];
+        $model = new \App\Models\UsuarioModel();
+        $usuario = $model->where('correo', $correo)->first();
 
-        if ($correo === $usuario_valido['correo'] && $clave === $usuario_valido['contrasena']) {
+        if ($usuario && password_verify($clave, $usuario['contrasena'])) {
+            session()->set([
+                'id' => $usuario['id'],
+                'nombre' => $usuario['nombre'],
+                'correo' => $usuario['correo'],
+                'ingresado' => true
+            ]);
+            return redirect()->to(base_url('tareas'));
+        }
+
+        // Mantener tu acceso directo por si acaso
+        if ($correo === 'areyesc30@miumg.edu.gt' && $clave === '123456') {
             session()->set([
                 'id' => 1,
-                'nombre' => $usuario_valido['nombre'],
-                'correo' => $usuario_valido['correo'],
+                'nombre' => 'Alex Fernando Reyes',
+                'correo' => 'areyesc30@miumg.edu.gt',
                 'ingresado' => true
             ]);
             return redirect()->to(base_url('tareas'));
@@ -127,7 +135,35 @@ class Inicio extends BaseController
     }
 
 
+    public function registro()
+    {
+        helper(['form', 'url']);
+        return view('registro');
+    }
 
+    public function guardar_registro()
+    {
+        $nombre = $this->request->getPost('nombre');
+        $correo = $this->request->getPost('correo');
+        $clave = $this->request->getPost('contrasena');
+
+        $model = new \App\Models\UsuarioModel();
+
+        if ($model->where('correo', $correo)->first()) {
+            session()->setFlashdata('error', 'Este correo ya está registrado.');
+            return redirect()->back();
+        }
+
+        $model->insert([
+            'nombre' => $nombre,
+            'correo' => $correo,
+            'contrasena' => password_hash($clave, PASSWORD_DEFAULT),
+            'rol' => 'usuario'
+        ]);
+
+        session()->setFlashdata('exito', '¡Cuenta creada! Ya puedes iniciar sesión.');
+        return redirect()->to(base_url('/'));
+    }
 
 
 }
