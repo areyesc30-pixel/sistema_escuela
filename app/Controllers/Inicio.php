@@ -96,4 +96,38 @@ class Inicio extends BaseController
         session()->destroy();
         return redirect()->to(base_url('/'));
     }
+
+    public function recuperar_clave()
+    {
+        helper(['form', 'url']);
+        return view('recuperar_clave');
+    }
+
+    public function enviar_recuperacion()
+    {
+        $correo = $this->request->getPost('correo');
+        
+        $usuario_valido = [
+            'correo' => 'areyesc30@miumg.edu.gt',
+            'contrasena' => '123456',
+            'nombre' => 'Alex Fernando Reyes'
+        ];
+
+        if ($correo === $usuario_valido['correo']) {
+            session()->setFlashdata('exito', 
+                "Hola " . $usuario_valido['nombre'] . ", tus datos de acceso son: <br>" .
+                "Correo: " . $usuario_valido['correo'] . "<br>" .
+                "Contraseña: " . $usuario_valido['contrasena']
+            );
+        } else {
+            session()->setFlashdata('error', 'No encontramos ninguna cuenta con ese correo.');
+        }
+
+        return redirect()->back();
+    }
+
+
+
+
+
 }
