@@ -22,3 +22,6 @@ $routes->get('recuperar-clave', 'Inicio::recuperar_clave');
 $routes->post('enviar-recuperacion', 'Inicio::enviar_recuperacion');
 $routes->get('idioma/(:any)', 'Inicio::idioma/$1');
 $routes->get('salir', 'Inicio::salir');
+
+$routes->post('subir-foto', 'Inicio::subir_foto');
+$routes->post('eliminar-foto', 'Inicio::eliminar_foto');
