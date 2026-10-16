@@ -44,18 +44,32 @@ class Inicio extends BaseController
         return redirect()->back();
     }
 
-    public function tareas()
+            public function tareas()
     {
-        if (!session()->get('ingresado')) {
-            return redirect()->to(base_url('/'));
+        $model = new \App\Models\TareaModel();
+        
+        $buscar = $this->request->getGet('buscar');
+        
+        if ($buscar) {
+            $datos['tareas'] = $model
+                ->where('usuario_id', session()->get('id'))
+                ->like('titulo', $buscar)
+                ->orLike('descripcion', $buscar)
+                ->where('usuario_id', session()->get('id'))
+                ->findAll();
+            
+            $datos['busqueda'] = $buscar;
+        } else {
+            $datos['tareas'] = $model
+                ->where('usuario_id', session()->get('id'))
+                ->findAll();
+            
+            $datos['busqueda'] = '';
         }
-
-        $model = new TareaModel();
-        $datos = [
-            'nombre' => session()->get('nombre'),
-            'tareas' => $model->where('usuario_id', 1)->findAll()
-        ];
-
+        
+        // Agregamos tu nombre para que aparezca en la página 👇
+        $datos['nombre'] = session()->get('nombre');
+        
         return view('lista_tareas', $datos);
     }
 
@@ -166,4 +180,35 @@ class Inicio extends BaseController
     }
 
 
+
+
+
+        public function editar_tarea($id)
+    {
+        helper(['form', 'url']);
+        
+        $model = new \App\Models\TareaModel();
+        $tarea = $model->find($id);
+        
+        if (!$tarea) {
+            return redirect()->to(base_url('tareas'));
+        }
+        
+        return view('editar_tarea', ['tarea' => $tarea]);
+    }
+
+    public function actualizar_tarea($id)
+    {
+        $model = new \App\Models\TareaModel();
+        
+        $datos = [
+            'titulo' => $this->request->getPost('titulo'),
+            'descripcion' => $this->request->getPost('descripcion')
+        ];
+        
+        $model->update($id, $datos);
+        
+        session()->setFlashdata('exito', 'Tarea actualizada correctamente');
+        return redirect()->to(base_url('tareas'));
+    }
 }
