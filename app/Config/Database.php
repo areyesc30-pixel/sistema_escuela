@@ -2,16 +2,41 @@
 
 namespace Config;
 
-class Database
+use CodeIgniter\Database\Config;
+
+class Database extends Config
 {
     public $default = [
+        'DSN'      => '',
         'hostname' => 'localhost',
-        'database' => 'sistema_tareas',
         'username' => 'root',
         'password' => '',
+        'database' => 'sistema_tareas',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
+        'DBDebug'  => true,
+        'charset'  => 'utf8mb4',
+        'DBCollat' => 'utf8mb4_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 3306,
+        'numberNative' => false,
+    ];
+
+    public $tests = [
+        'DSN'      => '',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'sistema_tareas',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => true,
         'charset'  => 'utf8mb4',
         'DBCollat' => 'utf8mb4_general_ci',
         'swapPre'  => '',
