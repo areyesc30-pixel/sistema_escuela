@@ -1,113 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Recuperar Contraseña</title>
+    <title><?= ($lang ?? 'es') === 'en' ? 'Recover Password' : 'Recuperar Contraseña' ?></title>
     <style>
-        body {
-            background-color: #cce0f5;
-            font-family: Arial;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #1a2e44;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .contenedor {
-            background-color: white;
-            padding: 25px;
-            margin: 0 auto;
-            max-width: 380px;
-            border-radius: 8px;
-            border: 1px solid #99b3cc;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            margin-top: 15px;
-            color: #333;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #99b3cc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4a90e2;
-            color: white;
-            border: none;
-            padding: 10px;
-            margin-top: 20px;
-            width: 100%;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #357abd;
-        }
-
-        .mensaje {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-        }
-
-        .exito {
-            background-color: #d4edda;
-            color: #155724;
-        }
-
-        .error {
-            background-color: #ffebee;
-            color: #c62828;
-        }
-
-        .volver {
-            text-align: center;
-            margin-top: 15px;
-        }
+        body {background: #f0f4f8; font-family: Arial; margin: 0; padding: 0; height: 100vh; display: flex; align-items: center; justify-content: center;}
+        .idioma {text-align: right; margin-bottom: 20px;}
+        .idioma a {color: #2b6cb0; text-decoration: none; margin: 0 5px;}
+        .idioma a.activo {font-weight: bold; border-bottom: 2px solid #2b6cb0;}
+        .contenedor {background: white; padding: 35px 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 380px;}
+        h2 {color: #2b6cb0; text-align: center; margin: 0 0 25px;}
+        label {display: block; margin: 15px 0 6px; color: #4a5568; font-weight: bold;}
+        input {width: 100%; padding: 11px; border: 2px solid #e2e8f0; border-radius: 8px; box-sizing: border-box; font-size: 15px;}
+        button {width: 100%; background: #38a169; color: white; border: none; padding: 12px; margin-top: 20px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;}
+        .enlaces {margin-top: 20px; text-align: center;}
+        .enlaces a {color: #2b6cb0; text-decoration: none; display: block; margin: 8px 0;}
     </style>
 </head>
 <body>
-
-    <h1>Recuperar Contraseña</h1>
-
+    <?php $lang = session()->get('idioma') ?? 'es'; ?>
     <div class="contenedor">
-        <?php if (session()->getFlashdata('exito')): ?>
-            <div class="mensaje exito">
-                <?= session()->getFlashdata('exito') ?>
-            </div>
-        <?php endif ?>
-
-        <?php if (session()->getFlashdata('error')): ?>
-            <div class="mensaje error">
-                <?= session()->getFlashdata('error') ?>
-            </div>
-        <?php endif ?>
-
+        <div class="idioma">
+            <a href="<?= base_url('idioma/es') ?>" class="<?= $lang === 'es' ? 'activo' : '' ?>">ES</a> |
+            <a href="<?= base_url('idioma/en') ?>" class="<?= $lang === 'en' ? 'activo' : '' ?>">EN</a>
+        </div>
+        <h2><?= $lang === 'en' ? 'Recover Password' : 'Recuperar Contraseña' ?></h2>
         <form action="<?= base_url('enviar-recuperacion') ?>" method="post">
             <?= csrf_field() ?>
-
-            <label>Escribe tu correo electrónico:</label>
-            <input type="email" name="correo" required placeholder="tu correo@ejemplo.com">
-
-            <button type="submit">Enviar instrucciones</button>
+            <label><?= $lang === 'en' ? 'Enter your email:' : 'Ingresa tu correo:' ?></label>
+            <input type="email" name="correo" required>
+            <button type="submit"><?= $lang === 'en' ? 'Send Instructions' : 'Enviar Instrucciones' ?></button>
         </form>
-
-        <div class="volver">
-            <a href="<?= base_url('/') ?>">Volver al inicio de sesión</a>
+        <div class="enlaces">
+            <a href="<?= base_url('ingresar') ?>">← <?= $lang === 'en' ? 'Back to Login' : 'Volver al Inicio de Sesión' ?></a>
         </div>
     </div>
-
-        </body>
-        </html>
-        
+</body>
+</html>
