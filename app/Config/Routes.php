@@ -29,3 +29,6 @@ $routes->post('eliminar-foto', 'Inicio::eliminar_foto');
 
 $routes->post('subir-foto', 'Inicio::subir_foto');
 $routes->post('eliminar-foto', 'Inicio::eliminar_foto');
+
+$routes->get('editar-usuario', 'Inicio::editar_usuario');
+$routes->post('actualizar-usuario', 'Inicio::actualizar_usuario');
