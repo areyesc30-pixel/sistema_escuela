@@ -211,4 +211,63 @@ class Inicio extends BaseController
         session()->setFlashdata('exito', 'Tarea actualizada correctamente');
         return redirect()->to(base_url('tareas'));
     }
+
+
+
+
+
+    public function perfil()
+    {
+        $model = new \App\Models\UsuarioModel();
+        $usuario = $model->find(session()->get('id'));
+        
+        return view('perfil', ['usuario' => $usuario]);
+    }
+
+    public function cambiar_contrasena()
+    {
+        $model = new \App\Models\UsuarioModel();
+        $usuario = $model->find(session()->get('id'));
+        
+        $actual = $this->request->getPost('contrasena_actual');
+        $nueva = $this->request->getPost('contrasena_nueva');
+        $confirmar = $this->request->getPost('confirmar_nueva');
+        
+        if (!password_verify($actual, $usuario['contrasena'])) {
+            session()->setFlashdata('error', 'La contraseña actual no es correcta');
+            return redirect()->to(base_url('perfil'));
+        }
+        
+        if ($nueva !== $confirmar) {
+            session()->setFlashdata('error', 'Las contraseñas nuevas no coinciden');
+            return redirect()->to(base_url('perfil'));
+        }
+        
+        if (strlen($nueva) < 6) {
+            session()->setFlashdata('error', 'La contraseña debe tener al menos 6 caracteres');
+            return redirect()->to(base_url('perfil'));
+        }
+        
+        $model->update($usuario['id'], [
+            'contrasena' => password_hash($nueva, PASSWORD_DEFAULT)
+        ]);
+        
+        session()->setFlashdata('exito', 'Contraseña actualizada correctamente');
+        return redirect()->to(base_url('perfil'));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
